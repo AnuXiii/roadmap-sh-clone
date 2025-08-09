@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+@import "tailwindcss";
+@import "./css/toastify.css";
+
+*:focus-visible {
+	border-color: var(--color-heading) !important;
+}
+
+@utility container {
+	margin-inline: auto;
+}
+
+@theme {
+	/* ===== Neutrals (light theme base) ===== */
+	--color-background: #ffffff; /* main page background */
+	--color-surface: #fbfbfd; /* cards, panels */
+	--color-muted: #6b7280; /* muted / secondary text */
+	--color-border: #e6e6ea; /* separators */
+	--color-shadow: rgba(11, 18, 32, 0.06); /* soft shadows */
+
+	/* ===== Text ===== */
+	--color-text: #0b1220; /* main text (dark but soft) */
+	--color-heading: #07090c; /* slightly stronger for headings */
+
+	/* ===== Appwrite Primary (brand) =====
+   Appwrite brand pink (from official assets) */
+	--color-primary-500: #fd366e; /* brand primary */
+	--color-primary-300: #ffd6e6; /* light tint */
+	--color-primary-200: #ff9ec6; /* mid tint */
+	--color-primary-700: #c82a51; /* darker shade */
+
+	/* ===== Accent & UI ===== */
+	--color-accent: #ffc857; /* warm, for secondary CTAs */
+	--color-success: #22c55e; /* success state */
+	--color-info: #3b82f6; /* info / links */
+	--color-warning: #f59e0b; /* warning state */
+	--color-danger: #ef4444; /* error state */
+
+	/* ===== Focus / interactive ===== */
+	--color-focus-ring: rgba(253, 54, 110, 0.18); /* soft, derived from primary with alpha */
+
+	/* ===== Special subtle layers (for Awwwards-like depth) ===== */
+	--color-glass: rgba(255, 255, 255, 0.6); /* semi-transparent overlay */
+	--color-muted-bg: #f5f5f7; /* very light background for sections */
+
+	--ease-smooth: cubic-bezier(0.25, 1, 0.5, 1); /* Smooth and modern animation */
+	--ease-soft: cubic-bezier(0.4, 0, 0.2, 1); /* Similar to Material Design */
+	--ease-snappy: cubic-bezier(0.3, 1.2, 0.7, 1); /* Spring-like or snappy effect */
+	--ease-bouncy: cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy and attractive */
+	--ease-decelerate: cubic-bezier(0, 0, 0.2, 1); /* Decelerates at the end */
+
+	--font-base: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+
+	body {
+		@apply text-text bg-background text-base font-base min-h-screen overflow-x-hidden;
+	}
+
+	button {
+		@apply cursor-pointer;
+	}
+
+	button,
+	input,
+	textarea {
+		@apply border-none outline-none;
+	}
+
+	li {
+		@apply list-none;
+	}
+
+	i {
+		@apply not-italic;
+	}
+}
+
+#app {
+	@apply min-h-screen bg-surface;
+}
+
+@layer components {
+	.link-overlay {
+		@apply absolute inset-0;
+	}
+
+	.btn-primary {
+		@apply font-semibold flex justify-between items-center gap-2 py-3 px-4 bg-heading border-2 border-solid border-background outline-2 outline-solid outline-heading text-background rounded-lg duration-200 ease-decelerate hover:scale-105 hover:outline-transparent;
+	}
+
+	.category-btn {
+		@apply flex py-3 px-4 border border-solid border-border rounded-lg bg-surface relative duration-200 ease-decelerate hover:bg-background;
+
+		&::after {
+			@apply content-[""] absolute bottom-[-10px] right-0 h-1 w-full scale-50 bg-heading opacity-0 duration-200 ease-decelerate;
+		}
+
+		&.active {
+			@apply shadow-xl shadow-shadow bg-background;
+
+			&::after {
+				@apply opacity-100;
+			}
+		}
+	}
+
+	.btn-danger {
+		@apply text-rose-500 border-rose-500 duration-200 ease-decelerate hover:bg-rose-500 hover:text-background;
+	}
+
+	.btn-secondary {
+		@apply flex items-center gap-4 py-2 px-3 rounded-lg duration-200 ease-decelerate hover:bg-heading hover:text-background;
+
+		span {
+			@apply underline underline-offset-8 group-hover:no-underline;
+		}
+	}
+
+	/* card styles */
+	.card {
+		@apply select-none cursor-pointer bg-background p-4 border border-solid border-border rounded-lg duration-200 ease-decelerate hover:border-heading/20 hover:bg-surface;
+	}
+
+	.card-header {
+		@apply flex items-start justify-between gap-4 pb-6;
+	}
+
+	.card-badge {
+		@apply p-2 border border-solid rounded-lg font-normal text-xs;
+	}
+
+	[data-difficulty="beginner"] {
+		@apply text-warning border-warning bg-warning/10;
+	}
+
+	[data-difficulty="intermediate"] {
+		@apply text-success border-success bg-success/10;
+	}
+
+	[data-difficulty="advanced"] {
+		@apply text-info border-info bg-info/10;
+	}
+
+	.card-badge--tech {
+		@apply bg-surface border-border text-text/80;
+	}
+
+	.card-info {
+		@apply flex flex-col gap-1 min-h-24 mb-auto;
+	}
+
+	.card-title {
+		@apply text-2xl font-semibold;
+	}
+
+	.card-desc {
+		@apply leading-8 text-pretty line-clamp-2;
+	}
+
+	.card-footer {
+		@apply flex items-center gap-4 justify-end pt-5;
+	}
+}
+
+.header {
+	@apply bg-background border-b border-solid border-border shadow-xl shadow-shadow/20;
+}
+
+.header-inner {
+	@apply flex justify-between items-center py-6 px-4;
+}
+
+.brand-title {
+	@apply text-2xl font-bold text-heading;
+}
+
+.main {
+	@apply min-h-screen pt-20 mx-4 sm:mx-0;
+}
+
+.main-header {
+	@apply flex flex-col gap-8 bg-background py-8 px-4 border border-solid border-border rounded-lg shadow-lg shadow-shadow sm:mx-auto;
+}
+
+.main-heading-cr {
+	@apply flex flex-col gap-4 pb-8 border-b border-solid border-border;
+}
+
+.main-title {
+	@apply text-heading font-bold text-2xl md:text-4xl lg:text-5xl;
+}
+
+.navigation {
+	@apply flex flex-col justify-between items-center gap-8 md:flex-row;
+}
+
+.category-lists {
+	@apply flex flex-wrap items-center gap-4 bg-muted-bg rounded-lg p-2 overflow-hidden;
+}
+
+.cards {
+	@apply pt-10;
+}
+
+.project-techs {
+	@apply flex justify-end flex-wrap gap-2;
+}
+
+[data-grid-layout] {
+	@apply grid gap-4 pb-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+
+[data-link-overlay] {
+	@apply relative;
+}
+
+.footer {
+	@apply bg-background;
+}
+
+.footer-text {
+	@apply text-center py-10;
+}
+
+.iframe-modal {
+	@apply bg-black/70 backdrop-blur-md flex flex-col justify-between items-center fixed inset-0 z-101;
+
+	iframe {
+		@apply w-full h-[95vh] bg-background;
+	}
+}
+
+.iframe-header {
+	@apply px-4 md:px-0 py-4 w-full flex justify-between items-center;
+}
+
+.project-title {
+	@apply text-2xl font-semibold text-white;
+}
+
+[data-project-preview-image] {
+	@apply fixed left-0 top-0 h-52 rounded-lg drop-shadow-2xl drop-shadow-black/30 object-cover pointer-events-none select-none hidden md:block;
+}
+
+.modal {
+	@apply fixed inset-0 flex flex-col justify-center items-center bg-black/70 backdrop-blur-md px-2;
+}
+
+.modal-inner {
+	@apply bg-background py-4 px-6 rounded-lg border border-solid border-heading shadow-2xl shadow-shadow w-full md:w-xl;
+}
+
+.modal-header {
+	@apply flex justify-between items-center gap-4 mb-15;
+}
+
+.modal-title {
+	@apply text-heading text-xl font-semibold;
+}
+
+.modal-content {
+	@apply w-full;
+}
+
+.form {
+	@apply flex flex-col gap-12;
+}
+
+[data-input-holder] {
+	@apply relative;
+}
+
+.input {
+	@apply w-full border-2 border-solid border-border py-2 px-3 text-xl rounded-lg;
+}
+
+textarea.input {
+	@apply min-h-16 max-h-32;
+}
+
+.placeholder {
+	@apply inline-block absolute pointer-events-none select-none top-3 left-3 text-text/60;
+
+	&.active {
+		span {
+			@apply -translate-y-7 translate-x-7 bg-background text-text/40;
+
+			&:first-child {
+				@apply pl-2;
+			}
+
+			&:last-child {
+				@apply pr-2;
+			}
+		}
+	}
+
+	span {
+		@apply inline-block duration-200 ease-decelerate;
+	}
+}
+
+.fade-in {
+	animation: fade-in 500ms var(--ease-snappy) forwards;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		translate: 0 20px;
+	}
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
+}
+
+.fade-out {
+	animation: fade-out 500ms var(--ease-snappy) forwards;
+}
+
+@keyframes fade-out {
+	from {
+		opacity: 1;
+		scale: 1;
+	}
+
+	to {
+		opacity: 0;
+		translate: 0 20px;
+	}
+}

@@ -1,0 +1,252 @@
+[
+	{
+		"id": 1,
+		"title": "Single Page CV",
+		"description": "a single-page HTML CV to showcase career history",
+		"thumbnail": "/images/1-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/1-single-page-cv",
+		"preview": "https://roadmap-sh-projects.vercel.app/1-single-page-cv/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML"]
+	},
+	{
+		"id": 2,
+		"title": "Basic HTML Website",
+		"description": "A simple HTML and CSS website with contact us page.",
+		"thumbnail": "/images/2-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/2-basic-html-website",
+		"preview": "https://roadmap-sh-projects.vercel.app/2-basic-html-website/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML"]
+	},
+	{
+		"id": 3,
+		"title": "Changelog Component",
+		"description": "Change log component for a website using HTML and CSS.",
+		"thumbnail": "/images/3-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/3-change-log",
+		"preview": "https://roadmap-sh-projects.vercel.app/3-change-log/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML"]
+	},
+	{
+		"id": 4,
+		"title": "Testimonial Cards",
+		"description": "Testimonials cards for a website using HTML and CSS.",
+		"thumbnail": "/images/4-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/4-testimonial",
+		"preview": "https://roadmap-sh-projects.vercel.app/4-testimonial/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML"]
+	},
+	{
+		"id": 5,
+		"title": "Date Picker UI",
+		"description": "Date Picker UI using HTML and CSS.",
+		"thumbnail": "/images/5-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/5-date-picker-ui",
+		"preview": "https://roadmap-sh-projects.vercel.app/5-date-picker-ui/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML"]
+	},
+	{
+		"id": 6,
+		"title": "Accessible Form UI",
+		"description": "a Simple Accessible form UI using HTML and CSS.",
+		"thumbnail": "/images/6-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/6-accessible-form-ui",
+		"preview": "https://roadmap-sh-projects.vercel.app/6-accessible-form-ui/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML"]
+	},
+	{
+		"id": 7,
+		"title": "Tabs",
+		"description": "a simple Tabs component using HTML, CSS and Javascript",
+		"thumbnail": "/images/7-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/7-tabs",
+		"preview": "https://roadmap-sh-projects.vercel.app/7-tabs/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 8,
+		"title": "Image Grid Layout",
+		"description": "grid layout of images using HTML and CSS",
+		"thumbnail": "/images/8-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/8-grid-image-layout",
+		"preview": "https://roadmap-sh-projects.vercel.app/8-grid-image-layout/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML"]
+	},
+	{
+		"id": 9,
+		"title": "Tooltip UI",
+		"description": "tooltip for navigation items using HTML and CSS",
+		"thumbnail": "/images/9-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/9-ui-tooltip",
+		"preview": "https://roadmap-sh-projects.vercel.app/9-ui-tooltip/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML"]
+	},
+	{
+		"id": 10,
+		"title": "Cookie Consent",
+		"description": "simple cookie consent banner with saving data on local storage using HTML, CSS and Javascript",
+		"thumbnail": "/images/10-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/10-cookie",
+		"preview": "https://roadmap-sh-projects.vercel.app/10-cookie/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 11,
+		"title": "Restricted Textarea",
+		"description": "textarea with live character count and a max character limit using HTML, CSS and Javascript",
+		"thumbnail": "/images/11-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/11-textarea-char-validator",
+		"preview": "https://roadmap-sh-projects.vercel.app/11-textarea-char-validator/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 12,
+		"title": "Accordion",
+		"description": "Accordion using HTML, CSS and Javascript",
+		"thumbnail": "/images/12-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/12-accordion",
+		"preview": "https://roadmap-sh-projects.vercel.app/12-accordion/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 13,
+		"title": "Age calculator",
+		"description": "age calculator using HTML, CSS and Javascript",
+		"thumbnail": "/images/13-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/13-age-calculator",
+		"preview": "https://roadmap-sh-projects.vercel.app/13-age-calculator/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 14,
+		"title": "Flash Cards",
+		"description": "Flash Cards app using HTML, CSS and Javascript",
+		"thumbnail": "/images/14-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/14-flash-cards",
+		"preview": "https://roadmap-sh-projects.vercel.app/14-flash-cards/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 15,
+		"title": "progress steps",
+		"description": "progress steps using HTML, CSS and Javascript",
+		"thumbnail": "/images/15-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/15-progress-steps",
+		"preview": "https://roadmap-sh-projects.vercel.app/15-progress-steps/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 16,
+		"title": "Dark Mode",
+		"description": "dark mode switcher using HTML, CSS and Javascript",
+		"thumbnail": "/images/16-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/16-dark-mode",
+		"preview": "https://roadmap-sh-projects.vercel.app/16-dark-mode/index.html",
+		"difficulty": "beginner",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 17,
+		"title": "Custom Dropdown",
+		"description": "custom dropdown using HTML, CSS and Javascript",
+		"thumbnail": "/images/17-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/17-custom-dropdown",
+		"preview": "https://roadmap-sh-projects.vercel.app/17-custom-dropdown/index.html",
+		"difficulty": "intermediate",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 18,
+		"title": "Task Tracker",
+		"description": "task tracker using HTML, CSS and Javascript",
+		"thumbnail": "/images/18-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/18-task-tracker",
+		"preview": "https://roadmap-sh-projects.vercel.app/18-task-tracker/index.html",
+		"difficulty": "intermediate",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 19,
+		"title": "Github Random Repository",
+		"description": "Github random repository finder using GitHub API",
+		"thumbnail": "/images/19-min.png",
+		"repository": "https://github.com/AnuXiii/roadmap-sh-projects/tree/main/19-github-random-repo",
+		"preview": "https://roadmap-sh-projects.vercel.app/19-github-random-repo/index.html",
+		"difficulty": "intermediate",
+		"badges": ["CSS", "HTML", "Javascript", "API"]
+	},
+	{
+		"id": 20,
+		"title": "Temperature Convertor",
+		"description": "Temperature convertor that converts between different units.",
+		"thumbnail": "/images/20-min.png",
+		"repository": "https://github.com/AnuXiii/temperature-convertor",
+		"preview": "https://temperature-convertor-sooty.vercel.app/",
+		"difficulty": "intermediate",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 21,
+		"title": "Subreddit Clinet",
+		"description": "reddit client with customizable subreddit lanes.",
+		"thumbnail": "/images/21-min.png",
+		"repository": "https://github.com/AnuXiii/subreddit-client",
+		"preview": "https://subreddit-client.vercel.app/",
+		"difficulty": "intermediate",
+		"badges": ["CSS", "HTML", "Javascript", "API"]
+	},
+	{
+		"id": 22,
+		"title": "Pomodoro Timer",
+		"description": "pomodoro tracker application productivity",
+		"thumbnail": "/images/22-min.png",
+		"repository": "https://github.com/AnuXiii/Pomodoro-Timer",
+		"preview": "https://pomodoro-spa.vercel.app/",
+		"difficulty": "intermediate",
+		"badges": ["CSS", "HTML", "Javascript"]
+	},
+	{
+		"id": 23,
+		"title": "AI Quiz APP",
+		"description": "AI based quiz application to test any knowledge",
+		"thumbnail": "/images/23-min.png",
+		"repository": "https://github.com/AnuXiii/AI-Quiz-App",
+		"preview": "https://ai-quiz-app-five.vercel.app/",
+		"difficulty": "intermediate",
+		"badges": ["CSS", "HTML", "Javascript", "API", "AI"]
+	},
+	{
+		"id": 24,
+		"title": "Weather APP",
+		"description": "weather app that fetches and displays weather for a given location.",
+		"thumbnail": "/images/24-min.png",
+		"repository": "https://github.com/AnuXiii/weather-app",
+		"preview": "https://weathery-app-spa.vercel.app/",
+		"difficulty": "intermediate",
+		"badges": ["CSS", "HTML", "Javascript", "API"]
+	},
+	{
+		"id": 25,
+		"title": "24hr Story Feature",
+		"description": "client side instagram stories feature clone.",
+		"thumbnail": "/images/25-min.png",
+		"repository": "https://github.com/AnuXiii/instagram-story",
+		"preview": "https://instagram-story-pied.vercel.app/",
+		"difficulty": "advanced",
+		"badges": ["CSS", "HTML", "Javascript"]
+	}
+]
