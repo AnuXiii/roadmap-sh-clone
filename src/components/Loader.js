@@ -11,6 +11,8 @@ function loader(parent, isLoading = false) {
 		return;
 	}
 
+	if (existingLoader) return;
+
 	const loader = document.createElement("div");
 	loader.className = "loader absolute inset-0 bg-black/80 flex justify-center items-center rounded-[inherit] z-50";
 	loader.innerHTML = `<div class="animate-spin size-12 border-3 border-solid border-primary-500 rounded-full border-r-transparent"></div>`;
