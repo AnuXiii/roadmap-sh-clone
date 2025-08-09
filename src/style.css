@@ -244,10 +244,10 @@
 }
 
 [data-project-preview-image-parent] {
-	@apply fixed left-0 top-0 pointer-events-none select-none hidden md:block;
+	@apply fixed h-52 left-0 top-0 pointer-events-none select-none hidden md:block;
 
 	img {
-		@apply h-52 rounded-lg drop-shadow-2xl drop-shadow-black/30 object-cover;
+		@apply size-full rounded-lg drop-shadow-2xl drop-shadow-black/30 object-cover;
 	}
 }
 
