@@ -243,8 +243,12 @@
 	@apply text-2xl font-semibold text-white;
 }
 
-[data-project-preview-image] {
-	@apply fixed left-0 top-0 h-52 rounded-lg drop-shadow-2xl drop-shadow-black/30 object-cover pointer-events-none select-none hidden md:block;
+[data-project-preview-image-parent] {
+	@apply fixed left-0 top-0 pointer-events-none select-none hidden md:block;
+
+	img {
+		@apply h-52 rounded-lg drop-shadow-2xl drop-shadow-black/30 object-cover;
+	}
 }
 
 .modal {

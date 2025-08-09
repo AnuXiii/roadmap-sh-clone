@@ -1,8 +1,10 @@
+import loader from "../components/Loader";
 import { hide, show } from "./AnimationUtils";
 
 class ProjectController {
 	constructor(articles) {
 		this.articles = document.querySelectorAll(articles);
+		this.previewImageParent = document.querySelector("[data-project-preview-image-parent]");
 		this.previewImage = document.querySelector("[data-project-preview-image]");
 		this.categoryListsContainer = document.querySelector("[data-category-lists]");
 		this.clearCategoryBtn = document.querySelector("[data-clear-category]");
@@ -24,15 +26,18 @@ class ProjectController {
 		this.articles.forEach((card) => {
 			card.addEventListener("mouseenter", () => {
 				this.setThumbnail(card.dataset.projectImage);
-				show(this.previewImage, "fade-in", "fade-out");
+				show(this.previewImageParent, "fade-in", "fade-out");
+
+				loader(this.previewImageParent, true);
+				this.previewImage.onload = () => loader(this.previewImageParent, false);
 			});
 
 			card.addEventListener("mouseleave", () => {
-				hide(this.previewImage, "fade-in", "fade-out");
+				hide(this.previewImageParent, "fade-in", "fade-out");
 			});
 
 			card.addEventListener("mousemove", (e) => {
-				this.previewImage.style.transform = `translate(${e.x - 350}px, ${e.y + 30}px)`;
+				this.previewImageParent.style.transform = `translate(${e.x - 350}px, ${e.y + 30}px)`;
 			});
 		});
 	}
