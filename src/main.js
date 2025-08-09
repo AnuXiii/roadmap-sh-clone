@@ -3,7 +3,7 @@ import newToast from "./components/Toast";
 import "./utils/FormController";
 import ProjectController from "./utils/ProjectController";
 
-const URL = "/src/data/projects.json";
+const URL = "/data/projects.json";
 const cards = document.querySelector("[data-grid-layout]");
 
 async function getProjects() {
