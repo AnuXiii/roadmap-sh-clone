@@ -28,12 +28,12 @@ function closeSubmitIdeaModal(e, manual = false) {
 	if (!manual) {
 		if (e.target.classList.contains("modal") || e.target.closest(".btn-danger")) {
 			hide(submitIdeaModal, "fade-in", "fade-out");
+			document.body.classList.remove("overflow-hidden");
 		}
 	} else {
 		hide(submitIdeaModal, "fade-in", "fade-out");
+		document.body.classList.remove("overflow-hidden");
 	}
-
-	document.body.classList.remove("overflow-hidden");
 }
 
 /* ******************************************************************** */
