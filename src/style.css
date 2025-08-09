@@ -220,11 +220,11 @@
 }
 
 .footer {
-	@apply bg-background;
+	@apply bg-background text-center py-10 px-4;
 }
 
-.footer-text {
-	@apply text-center py-10;
+.footer-link {
+	@apply block mt-5 underline underline-offset-4 font-semibold text-info;
 }
 
 .iframe-modal {
