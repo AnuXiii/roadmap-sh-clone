@@ -28,9 +28,10 @@ function openIframeModal(e) {
 
 function closeIframeModal() {
 	hide(iframeModal, "fade-in", "fade-out");
-	document.body.classList.remove("overflow-hidden");
 
 	ProjectIframe.src = "";
+
+	document.body.classList.remove("overflow-hidden");
 }
 
 function getProjectURL(url) {

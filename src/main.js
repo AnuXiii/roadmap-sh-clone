@@ -1,4 +1,5 @@
 import "./components/IframeMode";
+import newToast from "./components/Toast";
 import "./utils/FormController";
 import ProjectController from "./utils/ProjectController";
 
@@ -6,15 +7,21 @@ const URL = "/src/data/projects.json";
 const cards = document.querySelector("[data-grid-layout]");
 
 async function getProjects() {
+	cards.innerHTML = "";
+
 	const res = await fetch(URL);
 	const projects = await res.json();
 
-	if (!res.ok) {
-		throw new Error("Failed to fetch projects from local host");
-	}
+	try {
+		if (!res.ok) {
+			newToast("Failed to get Projects", "bg-primary-500");
+			return;
+		}
 
-	if (projects.length) {
-		return projects;
+		if (projects.length) return projects;
+	} catch (error) {
+		console.log(error.message);
+		newToast("Failed to load Projects", "bg-primary-500");
 	}
 }
 
@@ -22,26 +29,26 @@ async function initProjects() {
 	const projects = await getProjects();
 
 	const html = projects
-		.map((pr) => {
+		.map(({ id, title, thumbnail, preview, difficulty, badges, description, repository }) => {
 			return /*html*/ `
             			<article
 						
-                                data-project="${pr.id}"
-								data-project-title="${pr.title}"
-                                data-project-image="${pr.thumbnail}"
-								data-project-preview="${pr.preview}"
-								data-project-category="${pr.difficulty}"
+                                data-project="${id}"
+								data-project-title="${title}"
+                                data-project-image="${thumbnail}"
+								data-project-preview="${preview}"
+								data-project-category="${difficulty}"
 								role="tabpanel"
 								tabindex="0"
 								class="card fade-in">
 								<header class="card-header">
 									<span
-										data-difficulty="${pr.difficulty}"
+										data-difficulty="${difficulty}"
 										class="card-badge"
-										>${pr.difficulty}</span
+										>${difficulty}</span
 									>
 									<div class="project-techs">
-                                        ${pr.badges
+                                        ${badges
 																					.map(
 																						(badge) => /*html*/ `
                                            <span class="card-badge card-badge--tech">${badge}</span>
@@ -52,16 +59,16 @@ async function initProjects() {
 								</header>
 
 								<div class="card-info">
-									<h3 class="card-title">${pr.title}</h3>
+									<h3 class="card-title">${title}</h3>
 									<p class="card-desc">
-										${pr.description}
+										${description}
 									</p>
 								</div>
 
 								<footer class="card-footer">
 									<div data-btn-holder>
 										<a
-                                            href="${pr.repository}"
+                                            href="${repository}"
                                             target="_blank"
 											aria-label="open project on frame"
 											class="btn-primary">
@@ -84,7 +91,7 @@ async function initProjects() {
 									</div>
 									<div data-btn-holder>
 										<a
-                                            href="${pr.preview}"
+                                            href="${preview}"
                                             target="_blank"
 											aria-label="open project on frame"
 											class="btn-primary">

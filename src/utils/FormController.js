@@ -57,6 +57,8 @@ inputs.forEach((input) => {
 	});
 });
 
+/* ******************************************************************** */
+
 function successSubmit() {
 	inputs.forEach((inp) => inp.nextElementSibling.classList.remove("active"));
 	submitIdeaForm.reset();
