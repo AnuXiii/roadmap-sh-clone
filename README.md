@@ -1,4 +1,4 @@
-# 🚀 Roadmap.sh Projects - Frontend Learning Platform
+# 🚀 roadmap.sh Frontend Projects
 
 A comprehensive collection of frontend projects designed to take developers from beginner to advanced level. This platform showcases 25+ real-world projects with live demos, source code, and progressive difficulty levels.
 
